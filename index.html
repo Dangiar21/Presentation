@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maturapräsentation - Rückblick &amp; Reflexion</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons for clean aesthetic vector symbols -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.321.0/font/lucide.min.css">
+</head>
+<body>
+    <!-- Top Progress Bar -->
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <!-- Main Presentation Workspace -->
+    <div class="deck-container">
+        
+        <!-- Interactive Slides Container -->
+        <main class="presentation-canvas">
+
+            <!-- SLIDE 1: Titelfolie -->
+            <section class="slide active" data-title="Start">
+                <div class="title-slide-content">
+                    <div class="glow-orb orb-purple"></div>
+                    <div class="glow-orb orb-green"></div>
+                    
+                    <h1 class="main-present-title" style="font-size: 5.5rem; line-height: 1; margin-bottom: 0.5rem;">Selbstbetrachtung</h1>
+                    <p class="main-present-subtitle" style="font-size: 2.5rem; font-weight: 700; color: var(--text-primary); margin-bottom: 2.5rem;">Ich, Schule und Arbeit</p>
+                    
+                    <div class="title-divider"></div>
+                    
+                    <div class="title-meta-grid">
+                        <div class="meta-item">
+                            <span class="meta-label">Präsentiert von</span>
+                            <span class="meta-value">Tobias Weiss</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Schule</span>
+                            <span class="meta-value">Realgymnasium Meran</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Datum</span>
+                            <span class="meta-value">xx.xx.2026</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 2: Wie ich lerne & Schule (Stärken/Schwächen) -->
+            <section class="slide" data-title="Lernen &amp; Reflexion">
+                <div class="slide-header">
+                    <h1 class="slide-title">Ich und Schule</h1>
+                </div>
+                
+                <div class="slide-grid slide-grid-2">
+                    <!-- Column 1: Wie ich lerne (Flashcards) -->
+                    <div class="deck-widget-container" style="min-height: 380px; justify-content: flex-start; padding: 2rem;">
+                        <div class="steckbrief" style="background: var(--card-bg); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--card-border); width: 100%; margin-bottom: 1.5rem;">
+                            <h3 style="margin-bottom: 0.75rem; color: var(--accent-cyan); font-size: 1.8rem;"><i class="lucide-user"></i> Steckbrief</h3>
+                            <ul class="keyword-list" style="font-size: 1.25rem; gap: 0.5rem;">
+                                <li><strong>Name:</strong> Tobias Weiss</li>
+                                <li><strong>Schule:</strong> Realgymnasium Meran (5DNW)</li>
+                                <li><strong>Interessen:</strong> Mathematik, Philosophie, Politik, Literatur</li>
+                                <li><strong>Hobbys:</strong> Schach, Lesen, Zeichnen, Reisen</li>
+                            </ul>
+                        </div>
+
+                        <div class="deck-flipper-container" style="height: 240px; max-width: 440px; margin-bottom: 1rem; width: 100%;">
+                            <div class="flashcard-3d" id="deck-flashcard">
+                                <div class="flashcard-side flashcard-front">
+                                    <h2 style="font-size: 3.5rem; color: var(--text-primary); text-align: center; margin: auto;">Lernmethode</h2>
+                                </div>
+                                <div class="flashcard-side flashcard-back">
+                                    <h2 style="font-size: 3.5rem; color: var(--text-primary); text-align: center; margin: auto;">Karteikarten</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Stärken & Baustellen -->
+                    <div class="box-card border-green" style="gap: 1rem; padding: 2rem;">
+                        <div class="box-header">
+                            <i class="lucide-shield-check color-green"></i>
+                            <h2>Persönlichkeitsprofil</h2>
+                        </div>
+                        <div class="box-body" style="gap: 0.5rem;">
+                            <div class="metric-row"><span class="metric-label">Neugierde</span><div class="metric-bar-bg"><div class="metric-bar-fill green" style="width: 100%"></div></div></div>
+                            <div class="metric-row"><span class="metric-label">Analytisches Denken</span><div class="metric-bar-bg"><div class="metric-bar-fill green" style="width: 95%"></div></div></div>
+                            <div class="metric-row"><span class="metric-label">Reife</span><div class="metric-bar-bg"><div class="metric-bar-fill green" style="width: 90%"></div></div></div>
+                            <div class="metric-row"><span class="metric-label">Auffassungsgabe</span><div class="metric-bar-bg"><div class="metric-bar-fill green" style="width: 90%"></div></div></div>
+                            <div class="metric-row"><span class="metric-label">Hilfsbereitschaft</span><div class="metric-bar-bg"><div class="metric-bar-fill green" style="width: 90%"></div></div></div>
+                            <div class="metric-row"><span class="metric-label">Gelassenheit</span><div class="metric-bar-bg"><div class="metric-bar-fill green" style="width: 85%"></div></div></div>
+                            <div class="metric-row"><span class="metric-label">Kreativ</span><div class="metric-bar-bg"><div class="metric-bar-fill green" style="width: 80%"></div></div></div>
+                            <div class="metric-row"><span class="metric-label">Geduld</span><div class="metric-bar-bg"><div class="metric-bar-fill green" style="width: 75%"></div></div></div>
+                            <div class="metric-row"><span class="metric-label">Teamfähigkeit</span><div class="metric-bar-bg"><div class="metric-bar-fill" style="background: #f97316; width: 70%"></div></div></div>
+                            <div class="metric-row"><span class="metric-label">Motiviert</span><div class="metric-bar-bg"><div class="metric-bar-fill" style="background: #f97316; width: 60%"></div></div></div>
+                            <div class="metric-row"><span class="metric-label">Zielstrebigkeit</span><div class="metric-bar-bg"><div class="metric-bar-fill" style="background: #ef4444; width: 35%"></div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: Außerschulische Aktivitäten -->
+            <section class="slide" data-title="Engagement">
+                <div class="slide-header">
+                    <h1 class="slide-title">Außerschulische Aktivitäten</h1>
+                </div>
+                
+                <div class="xy-graph-container" style="width: 100%; max-width: 1050px; margin: 4rem auto 0 auto; transform: scale(1.05); background: var(--card-bg); padding: 1.5rem 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
+                    <div class="xy-graph" style="display: grid; grid-template-columns: 280px 1fr; align-items: center;">
+                        
+                        <!-- Theologie -->
+                        <div style="text-align: right; padding: 1rem 1.5rem 1rem 0; border-right: 2px solid var(--text-secondary);">
+                            <h3 style="font-size: 1.5rem; color: #ef4444; margin: 0; display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem;">Theologie <i class="lucide-crown"></i></h3>
+                            <p style="font-size: 1rem; color: var(--text-secondary); margin: 0.2rem 0 0 0; line-height: 1.2;">Top 10 national</p>
+                        </div>
+                        <div style="padding: 1rem 0 1rem 1rem;">
+                            <div class="metric-bar-bg" style="height: 24px; border-radius: 4px; background: rgba(0,0,0,0.05); width: 100%;">
+                                <div class="metric-bar-fill" style="width: 95%; height: 100%; background: #ef4444; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Schach -->
+                        <div style="text-align: right; padding: 1rem 1.5rem 1rem 0; border-right: 2px solid var(--text-secondary);">
+                            <h3 style="font-size: 1.5rem; color: #ec4899; margin: 0; display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem;">Schach <i class="lucide-trophy"></i></h3>
+                            <p style="font-size: 1rem; color: var(--text-secondary); margin: 0.2rem 0 0 0; line-height: 1.2;">Platz 11 National</p>
+                        </div>
+                        <div style="padding: 1rem 0 1rem 1rem;">
+                            <div class="metric-bar-bg" style="height: 24px; border-radius: 4px; background: rgba(0,0,0,0.05); width: 100%;">
+                                <div class="metric-bar-fill" style="width: 90%; height: 100%; background: #ec4899; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Mathematik -->
+                        <div style="text-align: right; padding: 1rem 1.5rem 1rem 0; border-right: 2px solid var(--text-secondary);">
+                            <h3 style="font-size: 1.5rem; color: #a855f7; margin: 0; display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem;">Mathematik <i class="lucide-award"></i></h3>
+                            <p style="font-size: 1rem; color: var(--text-secondary); margin: 0.2rem 0 0 0; line-height: 1.2;">Platz 2 Regional / Nat. qualifiziert</p>
+                        </div>
+                        <div style="padding: 1rem 0 1rem 1rem;">
+                            <div class="metric-bar-bg" style="height: 24px; border-radius: 4px; background: rgba(0,0,0,0.05); width: 100%;">
+                                <div class="metric-bar-fill" style="width: 72%; height: 100%; background: #a855f7; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Physik -->
+                        <div style="text-align: right; padding: 1rem 1.5rem 1rem 0; border-right: 2px solid var(--text-secondary);">
+                            <h3 style="font-size: 1.5rem; color: #38bdf8; margin: 0; display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem;">Physik <i class="lucide-medal"></i></h3>
+                            <p style="font-size: 1rem; color: var(--text-secondary); margin: 0.2rem 0 0 0; line-height: 1.2;">Platz 4 Regional</p>
+                        </div>
+                        <div style="padding: 1rem 0 1rem 1rem;">
+                            <div class="metric-bar-bg" style="height: 24px; border-radius: 4px; background: rgba(0,0,0,0.05); width: 100%;">
+                                <div class="metric-bar-fill" style="width: 55%; height: 100%; background: #38bdf8; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Chemie -->
+                        <div style="text-align: right; padding: 1rem 1.5rem 1.5rem 0; border-right: 2px solid var(--text-secondary); border-bottom: 2px solid var(--text-secondary);">
+                            <h3 style="font-size: 1.5rem; color: #1d4ed8; margin: 0; display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem;">Chemie <i class="lucide-flask-conical"></i></h3>
+                            <p style="font-size: 1rem; color: var(--text-secondary); margin: 0.2rem 0 0 0; line-height: 1.2;">Qualifiziert für Regionale</p>
+                        </div>
+                        <div style="padding: 1rem 0 1.5rem 1rem; border-bottom: 2px solid var(--text-secondary);">
+                            <div class="metric-bar-bg" style="height: 24px; border-radius: 4px; background: rgba(0,0,0,0.05); width: 100%;">
+                                <div class="metric-bar-fill" style="width: 43%; height: 100%; background: #1d4ed8; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+
+                        <!-- X-Axis Labels -->
+                        <div></div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0 0 1rem; color: var(--text-secondary); font-size: 0.95rem; font-weight: 600;">
+                            <span>Teilnahme</span>
+                            <span>Regional</span>
+                            <span>National</span>
+                            <span>Sieger</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: Transition Titelfolie Schule & Arbeitswelt -->
+            <section class="slide" data-title="Übergang">
+                <div class="title-slide-content">
+                    <div class="glow-orb orb-purple" style="opacity: 0.15; top: 20%; left: 30%;"></div>
+                    
+                    <h1 class="main-present-title" style="background: linear-gradient(135deg, #000 40%, var(--accent-green)); -webkit-background-clip: text; font-size: 5rem;">Schule &amp; Arbeitswelt</h1>
+                    <p class="main-present-subtitle" style="font-size: 1.5rem; color: var(--text-primary);">Der Schritt in die praktische Forschung an der Universität</p>
+                    
+                    <div class="title-divider" style="background: linear-gradient(90deg, var(--accent-cyan), var(--accent-green));"></div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: Infos zu Praktikum -->
+            <section class="slide" data-title="Praktikum">
+                <div class="slide-header">
+                    <h1 class="slide-title">Praktikumsübersicht</h1>
+                </div>
+
+                <div class="slide-grid slide-grid-2">
+                    <div class="hero-image-card" style="background-image: url('Bilder/UNI_Bozen.jpg')">
+                        <div class="image-gradient-overlay"></div>
+                        <div class="hero-image-content">
+                            <div class="badge-white">Universität Bozen</div>
+                            <h3>Fakultät für Agrar-, Umwelt- und Lebensmittelwissenschaften</h3>
+                        </div>
+                    </div>
+
+                    <div class="internship-details" style="display: flex; flex-direction: column; gap: 2rem; justify-content: center;">
+                        <div class="detail-row" style="align-items: center;">
+                            <i class="lucide-calendar color-purple" style="font-size: 3rem; width: 48px; height: 48px;"></i>
+                            <div>
+                                <h4 style="font-size: 1.5rem; color: var(--text-secondary);">Zeitraum</h4>
+                                <p style="font-size: 1.8rem; font-weight: 600; color: var(--text-primary);">Februar 2025 (2 Wochen)</p>
+                            </div>
+                        </div>
+                        <div class="detail-row" style="align-items: center;">
+                            <i class="lucide-map-pin color-cyan" style="font-size: 3rem; width: 48px; height: 48px;"></i>
+                            <div>
+                                <h4 style="font-size: 1.5rem; color: var(--text-secondary);">Institution</h4>
+                                <p style="font-size: 1.8rem; font-weight: 600; color: var(--text-primary);">Freie Universität Bozen</p>
+                            </div>
+                        </div>
+                        <div class="detail-row" style="align-items: center;">
+                            <i class="lucide-user color-orange" style="font-size: 3rem; width: 48px; height: 48px;"></i>
+                            <div>
+                                <h4 style="font-size: 1.5rem; color: var(--text-secondary);">Vorgesetzte</h4>
+                                <p style="font-size: 1.8rem; font-weight: 600; color: var(--text-primary);">Tanja Mimmo</p>
+                            </div>
+                        </div>
+                        <div class="detail-row" style="align-items: center;">
+                            <i class="lucide-binary color-green" style="font-size: 3rem; width: 48px; height: 48px;"></i>
+                            <div>
+                                <h4 style="font-size: 1.5rem; color: var(--text-secondary);">Tätigkeiten</h4>
+                                <p style="font-size: 1.8rem; font-weight: 600; color: var(--text-primary);">Laborarbeit und Datenverarbeitung</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6: Laborarbeit -->
+            <section class="slide" data-title="Laborarbeit">
+                <div class="slide-header">
+                    <h1 class="slide-title">Praktische Laborarbeit</h1>
+                </div>
+
+                <div class="gallery-layout">
+                    <!-- Photo gallery from the user's laboratory experiences -->
+                    <!-- Side Info Bar (Text Links) -->
+                    <div class="gallery-info-bar" style="padding: 2rem; background: var(--card-bg); border-radius: 12px; border: 1px solid var(--card-border); display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 2rem;"><i class="lucide-flask-conical"></i> Aufgabenbereich</h3>
+                        <div class="workflow-steps" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div class="wstep" style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <div class="step-num" style="font-size: 1.8rem; background: var(--accent-purple); color: white; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">1</div>
+                                <div class="step-text">
+                                    <strong style="font-size: 1.8rem; color: var(--text-primary);">Probenvorbereitung</strong>
+                                    <ul style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 0.5rem; padding-left: 1.5rem;">
+                                        <li>Schälen von Gerstensamen</li>
+                                        <li>Präzises Wiegen von Bodenproben</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="wstep" style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <div class="step-num" style="font-size: 1.8rem; background: var(--accent-cyan); color: white; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">2</div>
+                                <div class="step-text">
+                                    <strong style="font-size: 1.8rem; color: var(--text-primary);">Probenaufschluss</strong>
+                                    <ul style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 0.5rem; padding-left: 1.5rem;">
+                                        <li>Säureaufschluss</li>
+                                        <li>Probenzerkleinerung</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="wstep" style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <div class="step-num" style="font-size: 1.8rem; background: var(--accent-green); color: white; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">3</div>
+                                <div class="step-text">
+                                    <strong style="font-size: 1.8rem; color: var(--text-primary);">Analytik</strong>
+                                    <ul style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 0.5rem; padding-left: 1.5rem;">
+                                        <li>ICP Massenspektrometrie</li>
+                                        <li>Röntgenfluoreszenzanalyse (XRF)</li>
+                                        <li>HPLC Chromatographie</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo gallery (Bilder Rechts) -->
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-img="Bilder/bodenproben_flaschen.jpg" data-title="Bodenproben in Flaschen" data-desc="Vorbereitung für Extraktion und Säureaufschluss.">
+                            <img src="Bilder/bodenproben_flaschen.jpg" alt="Bodenproben">
+                            <span class="item-tag">Bodenproben</span>
+                        </div>
+                        <div class="gallery-item" data-img="Bilder/hochleistungsflüssigkeitschromatographie.jpg" data-title="HPLC Chromatographie" data-desc="Hochleistungsflüssigkeitschromatographie zur Trennung von Substanzgemischen.">
+                            <img src="Bilder/hochleistungsflüssigkeitschromatographie.jpg" alt="HPLC">
+                            <span class="item-tag">HPLC Analytik</span>
+                        </div>
+                        <div class="gallery-item" data-img="Bilder/standardproben.jpg" data-title="Standardproben" data-desc="Reagenzgläser mit Kalibrierungsstandards für quantitative Analysen.">
+                            <img src="Bilder/standardproben.jpg" alt="Standards">
+                            <span class="item-tag">Standards</span>
+                        </div>
+                        <div class="gallery-item" data-img="Bilder/x_ray_maschiene.jpg" data-title="XRF Röntgenfluoreszenz" data-desc="Röntgenfluoreszenzanalyse zur zerstörungsfreien Elementbestimmung.">
+                            <img src="Bilder/x_ray_maschiene.jpg" alt="XRF">
+                            <span class="item-tag">XRF Spektrometrie</span>
+                        </div>
+                        <div class="gallery-item" data-img="Bilder/waage.jpg" data-title="Analysenwaage" data-desc="Präzises Abwiegen von Boden- und Getreidemehlproben.">
+                            <img src="Bilder/waage.jpg" alt="Waage">
+                            <span class="item-tag">Präzisionswaage</span>
+                        </div>
+                        <div class="gallery-item" data-img="Bilder/gerste.jpg" data-title="Gerstensamen-Schälen" data-desc="Vorbereitung von Gerstensamen für Keim- und Kreuzungsexperimente.">
+                            <img src="Bilder/gerste.jpg" alt="Gerste">
+                            <span class="item-tag">Gerstenkreuzung</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 7: Coding -->
+            <section class="slide" data-title="Coding">
+                <div class="slide-header">
+                    <h1 class="slide-title">Informatik &amp; Coding-Demo</h1>
+                </div>
+
+                <!-- IDE Interface Widget -->
+                <div class="ide-container">
+                    <!-- IDE Sidebar -->
+                    <div class="ide-sidebar">
+                        <div class="sidebar-title">Dateibrowser</div>
+                        <div class="file-list">
+                            <div class="file-item active" data-file="automated_literature_search.py">
+                                <i class="lucide-file-code color-orange"></i>
+                                <span>automated_literature_search.py</span>
+                            </div>
+                            <div class="file-item" data-file="analyse.R">
+                                <i class="lucide-file-code color-cyan"></i>
+                                <span>analyse.R</span>
+                            </div>
+                            <div class="file-item" data-file="moodle_solver.py">
+                                <i class="lucide-file-code color-green"></i>
+                                <span>moodle_solver.py</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-ide-run" id="btn-ide-execute">
+                            <i class="lucide-play"></i> Skript ausführen
+                        </button>
+                    </div>
+
+                    <!-- IDE Editor and Output Console -->
+                    <div class="ide-editor-area">
+                        <!-- Editor window -->
+                        <div class="editor-window">
+                            <div class="editor-header-bar">
+                                <div class="window-dots">
+                                    <span class="dot-red"></span>
+                                    <span class="dot-yellow"></span>
+                                    <span class="dot-green"></span>
+                                </div>
+                                <span class="active-filename" id="editor-active-filename">automated_literature_search.py</span>
+                            </div>
+                            <div class="editor-content-container">
+                                <pre><code id="editor-code-body"># Dateicode wird dynamisch geladen</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Console & Output screen -->
+                        <div class="output-window">
+                            <div class="output-tabs">
+                                <button class="output-tab active" data-tab="console"><i class="lucide-terminal"></i> Terminal</button>
+                                <button class="output-tab" data-tab="plot"><i class="lucide-image"></i> Plot-Anzeige</button>
+                            </div>
+                            <div class="output-panels">
+                                <div class="output-panel active" id="panel-console">
+                                    <div class="console-history" id="console-history">
+                                        <div>Klicke oben auf "Skript ausführen", um das geladene Skript zu testen.</div>
+                                    </div>
+                                </div>
+                                <div class="output-panel" id="panel-plot">
+                                    <div class="plot-placeholder" id="plot-placeholder">
+                                        <i class="lucide-image-minus"></i>
+                                        <span>Führe 'analyse.R' aus, um den Daten-Plot zu laden.</span>
+                                    </div>
+                                    <img src="Bilder/youtube_analyse_plot.png" id="plot-image" alt="R Analyse Plot" style="display: none; width: 100%; height: auto;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Selenium Browser Overlay (Hidden by default) -->
+                    <div class="selenium-browser-overlay" id="selenium-browser">
+                        <div class="selenium-header">
+                            <div class="selenium-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="selenium-url" id="selenium-url">about:blank</div>
+                        </div>
+                        <div class="selenium-content" id="selenium-content">
+                            <!-- Dynamic Content Injected via JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: Meine Zukunft -->
+            <section class="slide" data-title="Zukunft">
+                <div class="slide-header">
+                    <h1 class="slide-title">Mein Karrierepfad</h1>
+                </div>
+
+                <div class="career-flow">
+                    <!-- Nodes -->
+                    <div class="flow-node node-matura"><h3>MATURA</h3></div>
+                    <div class="flow-node node-arbeit"><h3>Praktische<br>Körperliche<br>Arbeit</h3></div>
+                    <div class="flow-node node-studium"><h3>STUDIUM</h3></div>
+                    <div class="flow-node node-forschung"><h3>FORSCHUNG</h3></div>
+                    <div class="flow-node node-wirtschaft"><h3>PRIVAT&shy;WIRTSCHAFT</h3></div>
+                    <div class="flow-node node-finanzen"><h3>FINANZWESEN</h3></div>
+                    <div class="flow-node node-it"><h3>IT</h3></div>
+                    <div class="flow-node node-industrie"><h3>INDUSTRIE</h3></div>
+
+                    <!-- Connectors (arrows) -->
+                    <div class="conn conn-matura-arbeit"></div>
+                    <div class="conn conn-matura-studium"></div>
+                    <div class="conn conn-studium-wirtschaft"></div>
+                    <div class="conn conn-studium-forschung"></div>
+                    <div class="conn conn-wirtschaft-trunk"></div>
+                    <div class="conn conn-branch-bar"></div>
+                    <div class="conn conn-drop-finanzen"></div>
+                    <div class="conn conn-drop-industrie"></div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Presentation Control HUD (Remote Control) -->
+    <div class="presentation-hud">
+        <div class="hud-left">
+        </div>
+        
+        <div class="hud-center">
+            <button class="btn-hud" id="btn-hud-prev" title="Zurück"><i class="lucide-chevron-left"></i></button>
+            <span class="hud-indicator" id="hud-counter">1 / 8</span>
+            <button class="btn-hud" id="btn-hud-next" title="Weiter"><i class="lucide-chevron-right"></i></button>
+        </div>
+
+        <div class="hud-right">
+            <button class="btn-hud" id="btn-hud-fullscreen" title="Vollbild"><i class="lucide-maximize"></i></button>
+        </div>
+    </div>
+
+    <!-- Global Image Lightbox/Viewer -->
+    <div class="lightbox" id="image-lightbox">
+        <button class="lightbox-close" id="btn-lightbox-close"><i class="lucide-x"></i></button>
+        <div class="lightbox-content">
+            <img src="" id="lightbox-img" alt="Enlarged View">
+            <div class="lightbox-caption">
+                <h3 id="lightbox-caption-title"></h3>
+                <p id="lightbox-caption-desc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Logic Script -->
+    <script src="app.js"></script>
+</body>
+</html>
