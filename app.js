@@ -27,11 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (hudTitle) hudTitle.textContent = title;
         if (hudCounter) hudCounter.textContent = `${currentSlideIndex + 1} / ${slides.length}`;
 
-        // Progress bar percentage
-        if (progressBar) {
-            const pct = ((currentSlideIndex + 1) / slides.length) * 100;
-            progressBar.style.width = `${pct}%`;
-        }
+        // The progress bar is now used as a stealth 10-minute timer triggered by fullscreen
     }
 
     // Nav Remote Click handlers
@@ -49,18 +45,61 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Stealth Timer Variables
+    let presentationTimer = null;
+    let presentationStartTime = 0;
+    const TOTAL_TIME_MS = 10 * 60 * 1000; // 10 minutes
+
+    function startPresentationTimer() {
+        if (presentationTimer) return; // Already running
+        
+        // Reset bar
+        if (progressBar) {
+            progressBar.style.width = '0%';
+            progressBar.style.background = 'linear-gradient(90deg, var(--accent-purple), var(--accent-cyan))';
+        }
+        
+        presentationStartTime = Date.now();
+        
+        presentationTimer = setInterval(() => {
+            const elapsed = Date.now() - presentationStartTime;
+            let pct = (elapsed / TOTAL_TIME_MS) * 100;
+            if (pct > 100) pct = 100;
+            
+            if (progressBar) {
+                progressBar.style.width = `${pct}%`;
+                
+                // Color cues: Orange at 8 mins, Red at 9 mins
+                if (pct > 90) { 
+                    progressBar.style.background = '#ef4444'; // Red
+                } else if (pct > 80) { 
+                    progressBar.style.background = '#f97316'; // Orange
+                }
+            }
+            
+            if (pct >= 100) clearInterval(presentationTimer);
+        }, 1000);
+    }
+
     // Fullscreen Mode Handler
+    document.addEventListener('fullscreenchange', () => {
+        if (document.fullscreenElement) {
+            btnFullscreen.innerHTML = '<i class="lucide-minimize"></i>';
+            startPresentationTimer();
+        } else {
+            btnFullscreen.innerHTML = '<i class="lucide-maximize"></i>';
+        }
+        // Re-init icon if needed
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+
     btnFullscreen.addEventListener('click', () => {
         if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen().then(() => {
-                btnFullscreen.innerHTML = '<i class="lucide-minimize"></i>';
-            }).catch(err => {
+            document.documentElement.requestFullscreen().catch(err => {
                 console.error(`Fehler beim Aktivieren des Vollbildmodus: ${err.message}`);
             });
         } else {
-            document.exitFullscreen().then(() => {
-                btnFullscreen.innerHTML = '<i class="lucide-maximize"></i>';
-            });
+            document.exitFullscreen();
         }
     });
 
