@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Stealth Timer Variables
     let presentationTimer = null;
     let presentationStartTime = 0;
-    const TOTAL_TIME_MS = 10 * 60 * 1000; // 10 minutes
+    const TOTAL_TIME_MS = 7 * 60 * 1000; // 7 minutes
 
     function startPresentationTimer() {
         if (presentationTimer) return; // Already running
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (progressBar) {
                 progressBar.style.width = `${pct}%`;
                 
-                // Color cues: Orange at 8 mins, Red at 9 mins
+                // Color cues: Orange at 80%, Red at 90%
                 if (pct > 90) { 
                     progressBar.style.background = '#ef4444'; // Red
                 } else if (pct > 80) { 
